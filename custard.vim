@@ -10,7 +10,27 @@ endif
 " Set a name for your clor scheme and deifne the background type.
 let g:colors_name = "custard"
 set background=dark
-set termguidcolors
+set termguicolors
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" basic syntax for highlighting command										"
+" highlight or hi												"
+"														"
+" hi <group> guifg=<color> guibg=<color> gui=<style> ctermfg=<color> ctermbg=<color> cterm=<style>		"
+"														"
+" <group> - name of syntax element										"
+" <color> - color in either #rgb or 256bit 									"
+"														"
+" gui - style for syntax element [ bold; italic; underline; striketrough; ... ]					"
+" guifg - gui color of text [ #rgb ]										"
+" guibg - gui color of background [ #rgb ] 									"
+"														"
+" cterm - style for syntax element										"
+" ctermfg - 256-color terminals color of text [ 0; 1; ...; 255 ]						"
+" ctermbg - 256-color terminals color of text [ 0; 1; ...; 255 ]						"
+" if both cterm and gui colors are defined, cterm becomes a fallback and gui-colors are prioritized.		"
+" 														"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Palette ( hex )
 let s:rose = "#f2c6d1"
@@ -42,12 +62,14 @@ let s:trans_w = "#f8f8ff"
 
 " Core UI
 
-hi Normal		guifg=s:enby_b guibg=s:enby_b
+" hi Normal		guifg=s:enby_b guibg=s:enby_b
 " hi CursorLine		guibg=
-hi LineNr 		guifg=s:rose guibg=s:rose
+execute 'hi LineNr 		guifg=' . s:rose 
+" guibg=s:rose
+
 " hi CursorLineNr		guifg= guibg=
 " hi StatusLineNC		guifg= guibg=
-hi Visual		guifg= guibg= 
+" hi Visual		guifg= guibg= 
 " hi Search 		guifg= guibg=
 " hi IncSearch 		guifg= guibg=
 " hi Pmenu		guifg= guibg=
@@ -57,18 +79,20 @@ hi Visual		guifg= guibg=
 " Basic syntax
 
 " hi Constant		guifg=
-" hi Keyword		guifg=
-hi Function		guifg=
-hi Comment		guifg=
-hi Statement		guifg= 
-hi Identifier		guifg= 
-hi Constant		guifg=
-hi Type			guifg=
-hi Preproc		guifg=
-hi Error		guifg=
+execute 'hi Keyword		guifg=' .s:enby_w
+execute 'hi Function		guifg=' .s:enby_b
+execute 'hi Comment 		guifg=' .s:enby_b .' guibg=#666666 gui=italic'
+execute 'hi Statement		guifg=' .s:pan_p
+execute 'hi Identifier		guifg='	.s:pan_b
+execute 'hi Constant		guifg=' .s:sand
+execute 'hi Type		guifg=' .s:c_rose
+execute 'hi Preproc		guifg=' .s:c_sand
+execute 'hi Error		guifg=' .s:pan_p
 
 " Links
 
+" hi link Function Identifier
+" hi link Keyword Statement
 
 
 " misc / qol
