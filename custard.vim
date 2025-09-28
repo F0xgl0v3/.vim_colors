@@ -42,9 +42,9 @@ let s:trans_w = "#f8f8ff"
 
 " Core UI
 
-hi Normal		guifg= guibg=
+hi Normal		guifg=s:enby_b guibg=s:enby_b
 " hi CursorLine		guibg=
-hi LineNr 		guifg= guibg=
+hi LineNr 		guifg=s:rose guibg=s:rose
 " hi CursorLineNr		guifg= guibg=
 " hi StatusLineNC		guifg= guibg=
 hi Visual		guifg= guibg= 
@@ -66,6 +66,10 @@ hi Constant		guifg=
 hi Type			guifg=
 hi Preproc		guifg=
 hi Error		guifg=
+
+" Links
+
+
 
 " misc / qol
 
