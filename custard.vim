@@ -1,5 +1,5 @@
  
-" First, clear any existing highlighting.
+" Clear any existing highlighting.
 hi clear
 
 " If syntax is already on, reset it.
