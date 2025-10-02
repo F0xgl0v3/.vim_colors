@@ -47,6 +47,15 @@ let s:lgreen='#c7e28d'
 let s:dred='#c64356'
 
 let s:dgreen = "#5B8B6A"
+let s:olive = "#95B46A"
+let s:ddblue = "#1b2cc1"
+
+let s:lorange = "#ffbe86"
+let s:dorange = "#fe9000"
+let s:llavender = "#cb94f7"
+
+let s:dlavender = "#7c3696"
+let s:porcelain = "#999999"
 
 " Core UI
 
@@ -67,23 +76,24 @@ execute 'hi LineNr 		guifg=' . s:frose
 " Basic syntax
 
 " hi Constant		guifg=
-" execute 'hi normal		guifg=' .s:yell
-execute 'hi Preproc		guifg=' .s:frose
+" execute 'hi Normal		guifg=' .s:lblue
+
+execute 'hi Preproc		guifg=' .s:lblue
 execute 'hi Type		guifg=' .s:pink
-execute 'hi Function		guifg=' .s:dred
+execute 'hi Function		guifg=' .s:yell
 execute 'hi Comment 		guifg=' .s:dgreen .' gui=italic'
-execute 'hi Statement		guifg=' .s:frose
+execute 'hi Statement		guifg=' .s:dlavender
 execute 'hi Identifier		guifg='	.s:dred
 
 " execute 'hi Keyword		guifg=' .s:dred
 
-execute 'hi Constant		guifg=' .s:dblue
+execute 'hi Constant		guifg=' .s:porcelain
 execute 'hi String		guifg=' .s:sand
 execute 'hi Numbers 		guifg=' .s:sand
 execute 'hi Character 		guifg=' .s:sand
 
-execute 'hi Operator		guifg=' .s:dred
-execute 'hi Delimiter		guifg=' .s:dred
+execute 'hi Operator		guifg=' .s:lgreen
+execute 'hi Delimiter		guifg=' .s:dblue
 execute 'hi Special 		guifg=' .s:dred
 hi Error		guifg=#222222 guibg=#dc143c
 
